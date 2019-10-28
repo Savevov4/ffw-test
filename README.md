@@ -46,3 +46,27 @@ var my_variable = 1; // is both declaration and definition
                      // here declaration and assignment of value happen
                      // inline for variable my_variable
 ```
+# #4
+Consider the following data object. Use ES6 feature to easily create variables that extract and store values from the data object to obtain:
+- A variable called “names” that will contain <i>data.names</i>
+- A variable called “enrolled” that will contain value from data.enrolled but will default to “false” in case <i>data.enrolled</i> doesn’t exist or is not usable
+- A variable called “marks” that will contain value from <i>data.marksss</i>
+```js
+const data = {
+    names: ['A', 'B', 'C'],
+    enrolled: true,
+    marksss: {
+        'A': [1, 1, 1],
+        'B': [2, 2, 2],
+        'C': [3, 3, 3]
+    }
+}
+```
+# Solution
+```js
+const {
+    names,
+    enrolled = false,
+    marksss:marks
+} = data
+```
