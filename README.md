@@ -145,3 +145,8 @@ $('.articles > .node');
 $('.articles [class*="node"]');
 $('.articles [class^="node"]')
 ```
+
+# #7
+At what point do you recommend to run AJAX requests (or trigger other asynchronous tasks) during a React Component lifecycle? Why?
+# Solution
+Use this <b>ComponentDidMount</b> lifecycle. According to official React docs, the recommended place to do Ajax requests is in componentDidMount which is a lifecycle method that runs after the React component has been mounted to the DOM. ... This means if you make the Ajax call, and set the response to the component state, the component will not re-render.
