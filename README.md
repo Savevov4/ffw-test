@@ -12,3 +12,18 @@ console.log( obj.hash ) // -> foo
 console.log( obj.hostname ) // -> ffwagency.com
 console.log( obj.pathname ) // -> /do/any.php
 ```
+# Solution
+
+```js
+function parseUrl(url) {
+    let link = document.createElement('a');
+    link.href = url;
+    return link
+}
+
+let obj = parseUrl('http://ffwagency.com/do/any.php?a=1#foo')
+
+console.log( obj.hash ) // -> foo
+console.log( obj.hostname ) // -> ffwagency.com
+console.log( obj.pathname ) // -> /do/any.php
+```
