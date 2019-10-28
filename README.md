@@ -70,3 +70,55 @@ const {
     marksss:marks
 } = data
 ```
+# #5
+Consider the scenario from the image below. You have a <i>“functionality”</i> helper object that you reuse. In it you attach a click handler called <i>“clickListener”</i> that should ultimately change “isActive” and call <i>“checkTriggered”</i>. When a user clicks on a link: will your code execute correctly? If not – how should we fix it while keeping this original object structure?
+
+```js
+let functionality = {
+    isActive: false,
+
+    addListeners: function() {
+        document
+            .querySelectorAll('a')
+            .addEventListener(this.clickListener);
+    },
+
+    clickListener: function(event) {
+        event.preventDefault()
+        this.isActive = !this.isActive;
+        this.checkTriggered();
+    },
+
+    checkTriggered: function() {
+        // some code
+    }
+};
+
+functionality.addListeners()
+```
+# Solution
+This code will output error. We need add loop(for || for...of || foreach) and add bind method for function <i>"clickListener"</i>
+```js
+let functionality = {
+    isActive: false,
+
+    addListeners: function() {
+        let links = document.querySelectorAll('a');
+        for ( const link of links) {
+            link.addEventListener('click', this.clickListener.bind(this));
+        }
+    },
+
+    clickListener: function(event) {
+        event.preventDefault()
+        this.isActive = !this.isActive;
+        this.checkTriggered();
+    },
+
+    checkTriggered: function() {
+        // some code
+    }
+};
+
+functionality.addListeners();
+```
