@@ -39,7 +39,7 @@ var my_variable = 1;
 ```js
 console.log(my_variable) // 'undefined'
 ```
-In JavaScript every variable declaration and function declaration brings to the top of its current scope in which it's declared then assignment happen in order this term is called hoisting.
+In JavaScript every variable declaration and function declaration brings to the top of its current scope in which it's declared then assignment happen in order this term is called <b>Hoisting</b>.
 ```js
 var my_variable = 1; // is both declaration and definition 
                      // (also we can say we are doing initialisation),
