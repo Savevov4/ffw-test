@@ -122,3 +122,17 @@ let functionality = {
 
 functionality.addListeners();
 ```
+# #6
+You work on a jQuery project. Considering the following HTML code on a page. You need to extract all div.node only from the articles wrapper. How many ways of selector-picking using jQuery can you enumerate for this case?
+```html
+<div class="articles list">
+    <div class="node"></div>
+    <div class="node"></div>
+    <div class="node"></div>
+</div>
+<div class="blogs list">
+    <div class="node"></div>
+    <div class="node"></div>
+    <div class="node"></div>
+</div>
+```
