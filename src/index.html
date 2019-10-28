@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/index.min.css">
+</head>
+<body>
+    <section class="fonts">
+        <div class="tabs">
+            <h1 class="fonts__title">Please select one font</h1>
+            <nav class="tabs__nav">
+                <a class="tabs__nav-link" href="#tab1">my fonts</a>
+                <a class="tabs__nav-link" href="#tab2">buy fonts</a>
+            </nav>
+
+            <div class="tabs__content" id="tab1">
+                <form class="radio-group">
+                    <input class="radio-group__input" type="radio" name="font1" value="ns" id="notosans1">
+                    <label class="radio-group__label" for="notosans1">
+                        <div class="radio-group__block radio-group__block--blue">ns</div>
+                        <span class="radio-group__text">Noto Sans covers over 30 scripts</span>
+                    </label>
+                    <input class="radio-group__input" type="radio" name="font1" value="t" id="montserrat1">
+                    <label class="radio-group__label" for="montserrat1">
+                        <div class="radio-group__block radio-group__block--green">m</div>
+                        <span class="radio-group__text">Merriweather project is led by Sorkin Type</span>
+                    </label>
+                    <input class="radio-group__input" type="radio" name="font1" value="r" id="roboto1" checked>
+                    <label class="radio-group__label" for="roboto1">
+                        <div class="radio-group__block radio-group__block--pink">r</div>
+                        <span class="radio-group__text">Roboto doesn't compromise, allowing letters</span>
+                    </label>
+                </form>
+            </div>
+            <div class="tabs__content" id="tab2">
+                <form class="radio-group">
+                    <input class="radio-group__input" type="radio" name="font2" value="t" id="montserrat">
+                    <label class="radio-group__label" for="montserrat">
+                        <div class="radio-group__block radio-group__block--green">m</div>
+                        <span class="radio-group__text">Merriweather project is led by Sorkin Type</span>
+                    </label>
+                    <input class="radio-group__input" type="radio" name="font2" value="r" id="roboto" checked>
+                    <label class="radio-group__label" for="roboto">
+                        <div class="radio-group__block radio-group__block--pink">r</div>
+                        <span class="radio-group__text">Roboto doesn't compromise, allowing letters</span>
+                    </label>
+                    <input class="radio-group__input" type="radio" name="font2" value="ns" id="notosans">
+                    <label class="radio-group__label" for="notosans">
+                        <div class="radio-group__block radio-group__block--blue">ns</div>
+                        <span class="radio-group__text">Noto Sans covers over 30 scripts</span>
+                    </label>
+                </form>
+            </div>  
+        </div>
+    </section>
+</body>
+<script src="/src/js/base.js" type="text/javascript"></script>
+</html>

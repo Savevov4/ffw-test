@@ -1,0 +1,57 @@
+.tabs
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: flex-end
+    
+    &__nav
+        margin-right: 15px
+        margin-left: auto
+        margin-top: 15px
+
+        @media(min-width: 450px)
+            margin-top: 0
+
+    &__nav-link
+        text-transform: uppercase
+        color: $lightGrey
+        transition: .3s all ease
+
+        & + & 
+            margin-left: 15px
+
+        &:hover,
+        &:focus,
+        &[aria-selected]
+            color: $orange
+
+    &__content
+        margin-top: 10px
+        width: 100%
+        border: 2px solid $lightGrey
+        border-radius: 7px
+        padding: 15px
+
+        @media(min-width: 450px)
+            margin-top: 30px
+            padding: 30px
+
+        @media(min-width: 630px)
+            padding: 50px
+
+        &:focus
+            outline: 0
+        
+        &[hidden]
+            opacity: 0
+
+        
+        &:not([hidden])
+            animation: fadeIn .5s
+            animation-fill-mode: both
+
+@keyframes fadeIn
+    0%
+        opacity: 0
+    100%
+        opacity: 1

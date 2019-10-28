@@ -1,0 +1,87 @@
+//radio-group
+.radio-group
+    display: grid
+    grid-template-columns: 1fr
+    grid-gap: 15px
+
+    @media(min-width: 630px)
+        grid-template-columns: 1fr 1fr
+        grid-gap: 50px
+
+    &__input
+        display: none
+        &:checked + label
+            .radio-group__text
+                opacity: .5
+            .radio-group__block
+                box-shadow: inset 0 0 0 2px rgba($base-color, .5), inset 0 0 0 6px $white
+
+
+    &__label
+        display: flex
+        cursor: pointer
+
+        &:first-of-type
+            @media(min-width: 630px)
+                grid-row: 1 / span 2
+                flex-direction: column
+
+            .radio-group__block
+                @media(min-width: 630px)
+                    width: 150px
+                    height: 150px
+            
+            .radio-group__text
+                @media(min-width: 630px)
+                    margin-top: 30px
+                    margin-left: 0
+
+    &__block
+        width: 80px
+        height: 80px
+        flex-shrink: 0
+        border-radius: 20px
+        display: flex
+        align-items: flex-end
+        text-transform: uppercase
+        transition: .3s all ease
+        font-size: 28px
+        padding: 13px 18px
+        color: rgba($white, .5)
+        box-shadow: inset 0 0 0 2px $base-color, inset 0 0 0 6px $white
+
+        @media(min-width: 450px)
+            width: 100px
+            height: 100px
+
+        &--green
+            background-color: $green
+        &--pink
+            background-color: $pink
+        &--blue
+            background-color: $blue
+
+    &__text
+        color: $base-color
+        font-size: 16px
+        position: relative
+        transition: .3s all ease
+        padding-left: 20px
+        margin-left: 15px
+
+        @media(min-width: 450px)
+            margin-left: 30px
+            font-size: 18px
+
+        @media(min-width: 630px)
+            max-width: 200px
+
+        &::before
+            content: ''
+            position: absolute
+            top: 7px
+            left: 0
+            width: 10px
+            height: 10px
+            border-radius: 50%
+            background-color: $grey

@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before
+	box-sizing: border-box
+	padding: 0
+	margin: 0
+
+body
+	-webkit-text-size-adjust: none
+
+
+input[type="submit"]
+	cursor: pointer
+
+a
+	text-decoration: none
+	color: inherit
+
+select
+	background: 0
+	border: 0
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+	font-size: 0
+
+img
+	max-width: 100%
+	height: auto
+
+@media (pointer:coarse)
+	a, label
+		-webkit-tap-highlight-color: transparent
+
+input[type=text],
+input[type=submit],
+textarea
+	-webkit-appearance: none
+
+button
+	background-color: transparent
+	box-shadow: none
+	border-radius: 0

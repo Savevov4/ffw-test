@@ -1,0 +1,25 @@
+@import "base/_global"
+
+.fonts
+    width: calc(100% - 30px)
+    position: relative
+    margin: 15px
+
+    @media(min-width: 830px)
+        width: 800px
+
+    &__title
+        top: 0
+        margin-left: 15px
+        font-size: 18px
+        line-height: 1
+        width: 100%
+
+        @media(min-width: 450px)
+            width: auto
+            
+        @media(min-width: 630px)
+            font-size: 32px
+
+@import "layout/_tabs"
+@import "layout/_radio-group"
