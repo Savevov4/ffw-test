@@ -136,3 +136,12 @@ You work on a jQuery project. Considering the following HTML code on a page. You
     <div class="node"></div>
 </div>
 ```
+# Solution
+```js
+$('.articles .node');
+$('.articles.list .node');
+$('.list:not(.blogs) .node');
+$('.articles > .node');
+$('.articles [class*="node"]');
+$('.articles [class^="node"]')
+```
