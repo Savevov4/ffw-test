@@ -146,7 +146,38 @@ $('.articles [class*="node"]');
 $('.articles [class^="node"]')
 ```
 
-# #7
+# #8
 At what point do you recommend to run AJAX requests (or trigger other asynchronous tasks) during a React Component lifecycle? Why?
 # Solution
 Use this <b>ComponentDidMount</b> lifecycle. According to official React docs, the recommended place to do Ajax requests is in componentDidMount which is a lifecycle method that runs after the React component has been mounted to the DOM. ... This means if you make the Ajax call, and set the response to the component state, the component will not re-render.
+
+# #9
+Considering the following react component please pick one or more correct ways of passing a handler to a component. Also, explain what happens when you click each button from this component?
+```jsx
+class Example extends React.Component {
+    constructor(props) {
+        super(props);
+        this.text = 'This is an example text.';
+
+        this.handler2 = this.handler1.bind(this);
+    }
+
+    handler1() {
+        alert(this.text)
+    }
+
+    handler3 = () => alert(this.text);
+
+    render() {
+        return (
+            <div>
+                <button onClick={this.handler1()}>First</button>
+                <button onClick={this.handler1}>Second</button>
+                <button onClick={this.handler2}>Third</button>
+                <button onClick={this.handler3}>Fourth</button>
+            </div>
+        )
+    }
+}
+```
+# Solution
