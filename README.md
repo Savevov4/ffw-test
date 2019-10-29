@@ -145,7 +145,18 @@ $('.articles > .node');
 $('.articles [class*="node"]');
 $('.articles [class^="node"]')
 ```
-
+# #7
+Write a short JS snippet that pulls JSON users data from https://jsonplaceholder.typicode.com/users. Once you have the data print a div for each user instance object received like in the following example:
+```html
+<div class="user">
+    <h3 class="user__name">{user_name_here}</h3>
+    <div class="user__email">{user_email_here}</div>
+</div>
+```
+# Solution
+```js
+console,log('13');
+```
 # #8
 At what point do you recommend to run AJAX requests (or trigger other asynchronous tasks) during a React Component lifecycle? Why?
 # Solution
