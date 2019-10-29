@@ -181,3 +181,7 @@ class Example extends React.Component {
 }
 ```
 # Solution
+<b>1 Button </b> - the function <i>this.handler1()</i> is executed immediately when page loaded and output alert with text. Click on the button will be ignored.  
+<b>2 Button </b> - the function <i>this.handler1</i> will output <i>'undefined'</i>, because it does not have bind method. Or we can change the function to an arrow function. Arrow function don't have its own context and refer outside context.  
+<b>3 Button </b> - the function <i>this.handler2</i> calls handler2, after that handler2 calls handler1 and will ouput alert with text.  
+<b>4 Button </b> - the arrow function <i>this.handler3</i> will output alert with text <i>'This is an example text.'</i>
