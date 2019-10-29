@@ -155,7 +155,20 @@ Write a short JS snippet that pulls JSON users data from https://jsonplaceholder
 ```
 # Solution
 ```js
-console,log('13');
+class Users {
+    render = (data) => {
+        const list = document.querySelector('.user');
+        if (!list) return false
+        data.map(({ username, email }) => {
+            list.innerHTML += `<h3 class='user__name'>${username}</h3><div class='user__email'>${email}</div>`
+        })
+    }
+}
+
+const ui = new Users();
+fetch('https://jsonplaceholder.typicode.com/users')
+.then(res => res.json())
+.then(ui.render, error => console.log(error))
 ```
 # #8
 At what point do you recommend to run AJAX requests (or trigger other asynchronous tasks) during a React Component lifecycle? Why?
