@@ -1,5 +1,5 @@
 {
     "require": {
-        "twig/twig": "v2.12.1"
+        "twig/twig": "v3.11.2"
     }
 }
